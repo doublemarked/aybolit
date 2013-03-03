@@ -1,0 +1,32 @@
+<div class="map_block">
+  <div class="map_absolute"><%= image_tag "map_pic.png" =%></div>
+  <div class="container-narrow">
+    <div class="row-fluid">
+      <h2><%=t 'partials.recent.heading' %></h2>
+      <div class="report_blurb span4">
+        <h4><span class="exp_title"><%=t 'partials.recent.experiences_heading' %></span></h4>
+        <% report = Report.recent.first -%>
+        <p><%= truncate(report.doctor_experience, :length => 190, :separator => ' ') %></p>
+        <p class="center_text"><%= link_to t('partials.recent.full_report_link'), report %></p>
+      </div>
+      <div class="span3 best_hospitals_blurb">
+        <h4><span class="best_title"><%=t 'partials.recent.hospitals_heading' %></span></h4>
+        <% Hospital.best.limit(2).each do |h| %>
+          <p><%= link_to h.name, h %></p>
+          <p class="small_text"><%= h.display_location %></p>
+        <% end %>
+      </div>
+      <div class="span4">
+        <h4><span class="trending_title"><%=t 'partials.recent.doctors_heading' %></span></h4>
+        <% Doctor.trending.limit(2).each do |d| -%>
+          <p><%= link_to d.name, d %></p>
+          <p class="small_text">
+            <%= d.hospital.display_location %>
+          </p>
+        <% end %>
+      </div>
+      <div class="center_text"><%= link_to t('partials.recent.hospitals_link'), hospitals_path, :class => "red_btn" %></div>
+    </div>
+  </div>
+</div>
+

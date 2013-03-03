@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <h1><%t 'doctors.index.heading' %></h1>
+  <div class="input-append">
+    <%= form_tag doctors_path, :method => :get, :remote => true, :id => "query_form", :class => "inline-form" do -%>
+      <%= hidden_field_tag :offset, 0 %>
+      <%= hidden_field_tag :sorting, @sorting %>
+      <%= autocomplete_field_tag :name, @name, autocomplete_doctors_path, :placeholder => t('doctors.index.input_placeholder'), :id => "query", :class => "span3 doctors_input autoselector" %>
+      <%= submit_tag t('doctors.index.search_button'), :id => "query_button", :class => "add-on filter_button" %>
+    <% end %>
+  </div>
+  <div class="sorting_controls">
+    <p><%=t 'controls.sorting_label' %>: <%= select_tag t('controls.sorting_select_label'), doctor_sorting_options(@sorting), :id => "sorting", :class => "sorting-select" %></p>
+  </div>
+</div>
+
+<%= form_tag doctors_path, :method => :get, :remote => true, :id => "results_form", :class => "inline-form" do -%>
+  <%= hidden_field_tag :update, true %>
+  <%= hidden_field_tag :name, @name %>
+  <%= hidden_field_tag :offset, @offset %>
+  <%= hidden_field_tag :sorting, @sorting %>
+<% end %>
+
+<div id='results_container'>
+  <%= render :partial => "card_small", :collection => @doctors, :as => :doctor %>
+</div>
+<div id='results_empty' class='row-fluid' style='display: none'>
+  <div class="offset3 span6 well" style="text-align: center">
+    <%=t 'doctors.index.noresults' %><span id='results_empty_query'><%= @name %></span>! 
+  </div>
+</div>
+<div id='results_loading' class='row-fluid' style='display: none'>
+  <div class='offset3 span6 loading_indicator'></div>
+</div>
+<div class='row-fluid'>
+  <div id='more_results_bar' class='offset3 span6 reviews_controls' style="display: none">
+    <i class="icon-chevron-down" style='vertical-align: middle; margin-right: 5px;'></i>
+    <%= link_to t('messages.more_results'), doctors_path, :id => "more_results_link" %>
+    <i class="icon-chevron-down" style='vertical-align: middle; margin-left: 5px;'></i>
+  </div>
+</div>
+
+<%= javascript_tag do %>
+  has_more_results(<%= @more_results.to_json %>);
+  reveal_results();
+<% end %>

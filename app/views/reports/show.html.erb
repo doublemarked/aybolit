@@ -1,0 +1,67 @@
+<% content_for :head do %>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<% end %>
+<% content_for :ogp do %>
+  <meta property="og:type"        content="aybolit:report" /> 
+  <meta property="og:url"         content="http://<%= localized_domain %>/reports/<%= @report.id %>" /> 
+  <meta property="og:title"       content="<%=t 'reports.report_title', :id => @report.id %>" /> 
+  <meta property="og:image"       content="<%= full_image_path("logo.png") %>" /> 
+  <meta property="og:description" content="<%= truncate(@report.doctor_experience, :length => 140, :separator => ' ') %>" />
+  <meta property="aybolit:author" content="<%= @report.user.display_name %>" /> 
+  <meta property="aybolit:doctor" content="<%= @report.doctor.name %>" /> 
+  <meta property="aybolit:hospital" content="<%= @report.hospital.name %>" /> 
+<% end %>
+
+<div class="row-fluid">
+  <div class="pages_container">
+    <div class="offset1 span10 report_page bg_page1"></div>
+    <div class="offset1 span10 report_page bg_page2"></div>
+    <div class="offset1 span10 report_page report_full">
+      <div class="report-logobox">
+        <%= image_tag "logo.png", :class => "letterhead-logo" %>
+        <div>
+          <%= link_to "#", :class => "endorse_button red_btn_small", :"data-reportid" => @report.id, :"data-count" => @report.endorsements.size, :"data-message" => endorsement_message(@report) do %>
+          <i class='icon-thumbs-up icon-large'></i> <%=t 'reports.endorse' %>
+        <% end %>
+        </div>
+      </div>
+      <h2><%=t 'reports.report_title', :id => @report.id %></h2>
+      <dl class="dl-horizontal report_summary">
+        <dt><%=t 'reports.show.patient_label' %>:</dt>
+        <dd><%= @report.user.display_name || t('reports.messages.unknown_user_name') %> <%= "(via "+@report.user.provider.capitalize+")" if @report.user.provider %></dd>
+        <dt><%=t 'reports.show.doctor_label' %>:</dt>
+        <dd><%= link_to @report.doctor.name, @report.doctor %></dd>
+        <dt><%=t 'reports.show.hospital_label' %>:</dt>
+        <dd><%= link_to @report.hospital.name, @report.hospital %></dd>
+        <% if @report.occurred %>
+          <dt><%=t 'reports.show.occurred_label' %>:</dt>
+          <dd><%=l @report.occurred, :format => :month_year %></dd>
+        <% end %>
+        <dt><%=t 'reports.show.stats_label' %>:</dt>
+        <dd>
+          <i class='icon-envelope'></i>: <i class='<%= @report.delivery ? 'icon-ok':'icon-remove' %>'></i>
+          <div class="vertical_divider"></div>
+          <i class='icon-thumbs-up'></i>: <%= @report.endorsements.size %>
+          <div class="vertical_divider"></div>
+          <i class='icon-eye-open'></i>: <%= @report.views.to_i %>
+          <span class="report-stats-toggle">
+            <i class="icon-search"></i>
+            <u><%=t 'reports.show.details_link' %></u>
+            <i class="icon-double-angle-right"></i>
+          </span>
+        </dd>
+      </dl>
+      <%= render :partial => 'stats_panel', :locals => { :report => @report } %>
+      <div style="width: 80%;">
+        <h4><%=t 'reports.show.doctor_experience_label' %>:</h4>
+        <div class="experience_blurb"><%= simple_format(@report.doctor_experience) %></div>
+        <% if @report.hospital_experience.present? %>
+          <h4><%=t 'reports.show.hospital_experience_label' %>:</h4>
+          <div class="experience_blurb"><%= simple_format(@report.hospital_experience) %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "partials/endorsement_modal" %>

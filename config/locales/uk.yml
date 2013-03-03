@@ -1,0 +1,10 @@
+uk:
+  locale_name: Український
+
+  menu:
+    submit: Давай!
+  date:
+    formats:
+      month_year: "%b %Y"
+
+  

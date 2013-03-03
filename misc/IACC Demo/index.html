@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Aybolit</title>
+
+<link href="reset.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.7.2.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	var i;
+	i = 1;
+	$('div').click(function(){
+		i++;
+		$('div').html('<img src="img/aybolit-'+i+'.png">');
+	});	
+	
+	$('p').click(function(){
+		i--;
+		$('div').html('<img src="img/aybolit-'+i+'.png">');
+	});	
+});
+</script>
+
+<style type="text/css">
+
+body, html, div {
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+div {
+	position: absolute;
+	width: 1280px;
+	left: 50%;
+	margin-left: -640px;
+}	
+
+p {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100px;
+	z-index: 2;
+}
+
+</style>
+</head>
+
+<body>
+	<p></p>
+    <div>
+        <img src="img/aybolit-1.png">
+    </div>
+</body>
+</html>

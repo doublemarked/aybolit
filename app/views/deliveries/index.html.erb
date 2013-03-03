@@ -1,0 +1,23 @@
+<h1>Report Deliveries</h1>
+<p>This tool helps you package and deliver reports to hospitals.</p>
+
+<p><%= link_to 'Build Delivery', new_delivery_path, :class => "btn btn-primary btn-xlarge" %></p>
+
+<% unless @deliveries.empty? %>
+<h2>Past Deliveries</h2>
+<table>
+  <tr>
+    <th>Manager</th>
+    <th>Build Date</th>
+  </tr>
+
+  <% @deliveries.each do |delivery| %>
+  <tr>
+    <td><%= delivery.manager %></td>
+    <td><%= link_to 'Show', delivery, :class => 'btn' %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+
+<br />

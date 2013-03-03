@@ -1,0 +1,20 @@
+Aybolit.locale = undefined;
+Aybolit.locales = {
+  <% I18n.available_locales.each do |l| %>
+    <%= l %>: {
+      messages: <%= I18n.t('messages.js', l).to_json %>
+    },
+  <% end %>
+};
+
+Aybolit.set_locale = function(locale) {
+  if (!locale in Aybolit.locales) {
+    console.log("Missing locale '"+locale+"'");
+    return
+  }
+
+  Aybolit.locale = locale;
+  Aybolit.messages = Aybolit.locales[locale].messages;
+}
+
+Aybolit.set_locale('<%= I18n.default_locale %>');

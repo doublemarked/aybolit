@@ -1,0 +1,19 @@
+<div class="query_result review_block">
+  <%= link_to content_tag(:span, "", :class => "divlink"), report %>
+  <div class="doctor_icon"><%= report.doctor.name %></div>
+  <% if report.occurred.present? %>
+    <div class="calendar_icon"><%=l report.occurred, :format => :month_year %></div>
+  <% end %>
+  <div class="review_text">
+    <%= truncate(report.doctor_experience, :length => 190, :separator => ' ') %>
+    <% if report.doctor_experience.length > 190 %>
+      <%= link_to '('+t('controls.read_more_link')+')', report, :class => "read_link" %>
+    <% end %>
+  </div>
+  <div class="stats">
+    <i class='icon-eye-open icon-large'></i> <%= report.views.to_i %>&nbsp;
+    <i class='icon-thumbs-up icon-large'></i> <%= report.endorsements.size %>&nbsp;
+  </div>
+  <%= link_to t('reports.endorse'), "#", :class => "endorse_button", :"data-reportid" => report.id, :"data-count" => report.endorsements.size, :"data-message" => endorsement_message(report) %>
+</div>
+

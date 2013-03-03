@@ -1,0 +1,48 @@
+<% content_for :init_socnet, true %>
+
+<div id='endorsement_modal' class="modal hide fade" tabindex="-1" role="dialog">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h2><i class="icon-thumbs-up"></i> <%=t 'partials.endorsement_modal.endorsements' %></h2>
+  </div>
+  <div class="modal-body">
+    <div id='endorsement_status' class='text-error' style="font-weight: bold; font-size: 16px;"></div>
+
+    <p><i><%=t 'partials.endorsement_modal.endorsed_times_html' %></i></p>
+    <p>
+      <span class="standout"><%=t 'partials.endorsement_modal.show_your_support' %></span>&nbsp; 
+      <%=t 'partials.endorsement_modal.support_blurb_html' %></p>
+    <p>
+      <button id="facebook_endorse" class="btn btn-facebook btn-large">
+        <%=t 'partials.endorsement_modal.fb_button' %>
+        <i class='icon-double-angle-right'></i>
+        <i class='icon-spinner icon-spin' style='display:none'></i>
+      </button>
+    </p>
+    <p>
+      <button id="vkontakte_endorse" class="btn btn-vkontakte btn-large">
+        <%=t 'partials.endorsement_modal.vk_button' %>
+        <i class='icon-double-angle-right'></i>
+        <i class='icon-spinner icon-spin' style='display:none'></i>
+      </button>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal"><%=t 'partials.endorsement_modal.nevermind_button' %></button>
+  </div>
+</div>
+<div id='thanks_modal' class="modal hide fade" tabindex="-1" role="dialog">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h2><i class="icon-thumbs-up"></i> <%=t 'partials.endorsement_modal.thanks_heading' %></h2>
+  </div>
+  <div class="modal-body">
+    <p>
+      <span class="standout"><%=t 'partials.endorsement_modal.thanks_lead' %></span>&nbsp;
+      <%=t 'partials.endorsement_modal.thanks_blurb' %>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal"><%=t 'partials.endorsement_modal.dismiss_button' %></button>
+  </div>
+</div>

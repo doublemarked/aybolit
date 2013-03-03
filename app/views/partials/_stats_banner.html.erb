@@ -1,0 +1,4 @@
+<p>
+ <%=t 'partials.stats_banner.stats_blurb_html', :report_count => Report.count, :user_count => User.count, :percentage => delivery_percentage %>
+ <%= link_to t('partials.stats_banner.more_info_link'), page_path(:about) %>.
+</p>

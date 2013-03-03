@@ -1,0 +1,40 @@
+<div class="report-stats-panel well" style="display: none">
+  <div class="row-fluid">
+    <div class="span4">
+      <p class="heading"><%=t 'reports.stats.heading' %></p>
+      <ul class="unstyled">
+        <li><i class='icon-eye-open icon-large'> </i> <%= report.views.to_i %> <%=t 'reports.stats.views' %></li>
+        <li><i class='icon-thumbs-up icon-large'></i> <%= report.endorsements.size %> <%=t 'reports.stats.endorsements' %></li>
+        <li><i class='icon-envelope icon-large'></i> <%= report.delivery ? t('reports.stats.delivered') : t('reports.stats.undelivered') %></li>
+      </ul>
+      <p class="center_text">
+      <%= link_to "#", :class => "endorse_button btn btn-primary", :"data-reportid" => @report.id, :"data-count" => report.endorsements.size, :"data-message" => endorsement_message(@report) do %>
+        <i class='icon-thumbs-up icon-large'></i> <%=t 'reports.endorse' %>
+      <% end %>
+      </p>
+    </div>
+    <% if report.delivery %>
+      <div class="span4 report-stats-col">
+        <p class="heading"><%=t 'reports.stats.delivery.heading' %></p>
+        <ul class="unstyled" style="font-size: 12px;">
+          <li><u><%=t 'reports.stats.delivery.date_label' %></u>: <%= @report.delivery.delivered %></li>
+          <li><u><%=t 'reports.stats.delivery.manager_label' %></u>: <%= @report.delivery.manager %></li>
+          <li><u><%=t 'reports.stats.sent_doctor_label' %></u> <i class='<%= @report.delivery.delivered_doctor ? 'icon-ok' : 'icon-remove' %>'></i></li>
+          <li><u><%=t 'reports.stats.sent_hospital_label' %></u> <i class='<%= @report.delivery.delivered_hospital ? 'icon-ok' : 'icon-remove' %>'></i></li>
+        </ul>
+      </div>
+    <% end %>
+    <% if report.endorsements %>
+      <div class="span4 report-stats-col">
+        <p class="heading"><i class='icon-thumbs-up icon-large'></i> <%=t 'reports.stats.endorsement_heading' %></p>
+        <p><%=t 'reports.stats.endorsement_blurb_html', :count => report.endorsements.size %></p>
+        <div class="endorsement_list">
+          <% report.endorsements.reverse.each do |e| %>
+            <i class='icon-thumbs-up'></i>
+            <b><%= e.user.display_name %></b> <%= "(#{e.user.location })" unless e.user.location.blank? %><br/>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

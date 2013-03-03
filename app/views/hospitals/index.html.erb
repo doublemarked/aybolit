@@ -1,0 +1,50 @@
+<div class="jumbotron">
+  <h1><%=t 'hospitals.index.heading' %></h1>
+  <div class="input-prepend input-append">
+    <%= button_tag "", :id => "geolocate_button", :class => "add-on home_button" %>
+    <%= form_tag hospitals_path, :method => :get, :remote => true, :id => "query_form", :class => "inline-form" do -%>
+      <%= hidden_field_tag :offset, 0 %>
+      <%= hidden_field_tag :sorting, @sorting %>
+      <%= hidden_field_tag :latitude, @latitude %>
+      <%= hidden_field_tag :longitude, @longitude %>
+      <%= autocomplete_field_tag :location, @location, autocomplete_hospital_locations_path, :placeholder => t('hospitals.index.location_placeholder'), :id => "query", :class => "span3 location_input autoselector" %>
+      <%= submit_tag t('hospitals.index.filter_button'), :id => "query_button", :class => "add-on filter_button" %>
+    <% end %>
+  </div>
+  <div class="sorting_controls">
+    <p><%=t 'controls.sorting_label' %>: <%= select_tag t('controls.sorting_select_label'), hospital_sorting_options(@sorting), :id => "sorting", :class => "sorting-select" %></p>
+  </div>
+</div>
+
+<%= form_tag hospitals_path, :method => :get, :remote => true, :id => "results_form", :class => "inline-form" do -%>
+  <%= hidden_field_tag :update, true %>
+  <%= hidden_field_tag :offset, @offset %>
+  <%= hidden_field_tag :latitude, @latitude %>
+  <%= hidden_field_tag :longitude, @longitude %>
+  <%= hidden_field_tag :location, @location %>
+  <%= hidden_field_tag :sorting, @sorting %>
+<% end %>
+
+<div id='results_container'>
+  <%= render :partial => "card_small", :collection => @hospitals, :as => :hospital %>
+</div>
+<div id='results_empty' class='row-fluid' style='display: none'>
+  <div class="offset3 span6 well" style="text-align: center">
+    <%=t 'messages.noresults' %><span id='results_empty_query'><%= @location %></span>! <%=t 'hospitals.index.suggest_location' %><%= link_to t('hospitals.default_location'), hospitals_path(:location => t('hospitals.default_location')), :class => "onpage_query_link" %>?
+  </div>
+</div>
+<div id='results_loading' class='row-fluid' style='display: none'>
+  <div class='offset3 span6 loading_indicator'></div>
+</div>
+<div class='row-fluid'>
+  <div id='more_results_bar' class='offset3 span6 reviews_controls' style="display: none">
+    <i class="icon-chevron-down" style='vertical-align: middle; margin-right: 5px;'></i>
+    <%= link_to t('messages.more_results'), hospitals_path, :id => "more_results_link" %>
+    <i class="icon-chevron-down" style='vertical-align: middle; margin-left: 5px;'></i>
+  </div>
+</div>
+
+<%= javascript_tag do %>
+  has_more_results(<%= @more_results.to_json %>);
+  reveal_results();
+<% end %>

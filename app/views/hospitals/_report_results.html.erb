@@ -1,0 +1,10 @@
+<% @reports.each_slice(2) do |slice| %>
+  <div class="row-fluid">
+    <% slice.each do |r| %>
+      <div class="query_result_row span6">
+        <%= render :partial => 'reports/card_small', :locals => { :report => r } %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+

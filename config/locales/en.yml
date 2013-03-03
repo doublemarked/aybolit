@@ -1,0 +1,193 @@
+en:
+  locale_name: English
+
+  menu:
+    submit: Submit Experience
+    hospitals: Check a Hospital
+    logout: Logout
+    copyright: Aybolit 2013
+    about: About
+    contact: Contact    
+
+  doctors:
+    search_placeholder: Find Doctor
+    index:
+      heading: Find A Doctor
+      input_placeholder: Enter the doctor's name
+      search_button: Search
+    show:
+      # Prefixed by the # of reports for this doctor. Example: '43 experiences'
+      experiences_heading: experiences
+      # Prefixed by the # of reports sent to this doctor. Example: '41 sent to the doctor'
+      delivered_heading: sent to the doctor
+
+  hospitals:
+    # Replace this with the locale-appropriate translation and location.
+    default_location: Kiev, Ukraine
+
+    trending_doctors:
+      heading: Trending doctors
+    index:
+      heading: Check a Hospital
+      location_placeholder: Enter your location
+      filter_button: Filter
+      # This is followed by a link to the default location. Example: 'Maybe try <a>Kirovohrad, Ukraine</a>?'
+      suggest_location: Maybe try 
+    show:
+      # Prefixed by the # of reports for this hospital. Example: '43 experiences'
+      experiences_heading: experiences
+      # Prefixed by the # of reports sent to this hospital. Example: '41 sent to the hospital'
+      delivered_heading: sent to the hospital
+
+  reports:
+    endorse: Endorse
+    report_title: "Patient Report #FC2D-88%{id}"
+    created: Report created!
+    show:
+      patient_label: Patient
+      doctor_label: Doctor
+      hospital_label: Hospital
+      occurred_label: Date of Visit
+      stats_label: Supporters
+      details_link: Details
+      doctor_experience_label: Experience With Doctor
+      hospital_experience_label: Experience With Hospital
+
+
+    stats:
+      heading: Report Details
+      # Example usage: '1120 Views'
+      views: Views
+      # Example usage: '93 Endorsements'
+      endorsements: Endorsements
+
+      endorsement_heading: Endorsements
+      endorsement_blurb_html: This report has been endorsed by <b>%{count}</b> people.
+
+      # Whether or not the report was delivered to the doctor/hospital.
+      delivered: Delivered
+      undelivered: Not Yet Delivered
+
+      delivery:
+        heading: Delivery Info
+        date_label: Mailed On
+        manager_label: Delivery Manager
+        sent_doctor_label: Sent To Doctor?
+        sent_hospital_label: Sent To Hospital?
+
+  submissions:
+    prereq_form:
+      prereq1: I had a positive experience with my doctor.
+      prereq2: I did not pay a bribe.
+      submit_button: Get Started
+    main_form:
+      hospital_label: Hospital
+      oblast_select_label: Select Oblast
+      district_select_label: Select District
+      hospital_select_label: Select Hospital
+      doctor_label: Doctor's name
+      doctor_experience_label: Your experience with the doctor
+      hospital_experience_label: Your experience with the hospital (optional)
+      occurred_label: When was this? (optional)
+      submit_button: Move to last step 
+    login_form:
+      blurb: "To prevent fraud, we require you to identify yourself to us. Please do so using one of the following:"
+      privacy_note: Your info will only be used for indentification. We will not publish your full name, nor post on your social media accounts without your prior consent.
+
+  partials:
+    splash:
+      heading1: A Good Doctor Is Hard To Find.
+      heading2: Help us fight corruption in the Ukrainian medical system.
+      heading3: Support ethical doctors and hospitals. Save Lives.
+      heading4: Support Your Doctor, Submit Your Experience!
+
+    stats_banner: 
+      stats_blurb_html: Aybolit has collected <b>%{report_count}</b> experiences from %{user_count} people. Over <b>%{percentage}%</b> of them have been sent to hospitals.
+      more_info_link: Find out more
+
+    how_it_works: 
+      heading: How Aybolit works
+      description: We use your stories of positive, ethical encounters with Ukrainian doctors to build an index of the best hospitals and clinics in Ukraine. We send your reports directly to hospitals and doctors.
+      about_page_link: Read more about Aybolit and how it works
+
+    recent:
+      heading: Recently on Aybolit
+      experiences_heading: Recent Experiences
+      hospitals_heading: Best Hospitals      
+      doctors_heading: Trending Doctors
+      full_report_link: View Full Report
+      hospitals_link: Check Hospitals in Your Region
+
+    prereq_modal:
+      heading: Requirements
+      explaination1_html: "Sorry, all Aybolit submissions must meet a very specific criterion: they must be <strong>positive experiences</strong> that did not require any sort of bribe, fee, or gift from the patient."
+      explaination2_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, belong elsewhere.
+      explaination3_html: "If you'd like to report something that does not meet our criteria, please consider one of the following:"
+      partner_link1: Partner Site / NGO (EXAMPLE)
+      partner_link2: Some Patients Services Organization (EXAMPLE)
+      partner_link3: Bribe Reporting (EXAMPLE)
+      dismiss_button: I understand 
+
+    endorsement_modal:
+      endorsements: Endorsements
+      endorsed_times_html: This report has been endorsed <b><span id="endorsement_modal_cnt"></span></b> times.
+      show_your_support: Show Your Support!
+      support_blurb_html: Aybolit depends on the visible support of real people. Endorsing a Report ensures that doctors and hospitals see the impact of their positive actions. <u>Endorsements are sent to doctors also -- so your support is essential.</u>
+      fb_button: Endorse with Facebook
+      vk_button: Endorse with VKontakte
+      nevermind_button: Nevermind
+      thanks_heading: Thank You!
+      thanks_lead: Thank you for your support!
+      thanks_blurb: Aybolit depends on the visible support of real people. Your endorsement helps us show doctors that their actions matter.
+      dismiss_button: Dismiss
+
+
+  # These are from controls shared across pages
+  controls:
+    # This small text is displayed at the end of a report summary that has been truncated. It takes you to the full report.
+    read_more_link: read on
+
+    sorting_label: sort by
+    # This is the default value of the sorting select box
+    sorting_select_label: sorting
+
+    # These are options used in the sorting select boxes
+    sort_by_relevance: relevance
+    sort_by_recent_reports: most recent reports
+    sort_by_num_reports: most reports
+    sort_by_distance: distance
+    sort_by_popularity: most popular
+    sort_by_undelivered: undelivered
+
+  # These are shared messages 
+  messages:
+    # Displayed when there are more pages of search results available
+    more_results: More Results
+    # The following string prefixes the failed search terms. Example: Sorry, no results for 'Dr. Dre'.
+    noresults: Sorry, no results for 
+    # Showed in place of a user's name when we don't know their name
+    unknown_user_name: Unidentified
+
+    # Displayed when the user has logged out
+    logged_out: Logged out. 
+
+    social_media_endorsement: "I have read and support a report on Aybolit describing the following ethical public health provider,\n\nDoctor: %{doctor}\nHospital: %{hospital}\n\nClick below to read this Report!"
+
+    # This is displayed when something highly technical failed with VK.
+    vk_sig_failed: Auth Signature failed check. 
+
+    # These are various messages used in the Javascript code
+    js:
+      login_failure: Login Failure.
+      error: Error
+      already_endorsed: "Error: You've already endorsed this report! Thanks!"
+      endorsement_complete: Endorsement complete!
+      vk_wallpost_failure: Sorry, there were some problems sending your endorsement to VKontakte.
+      
+    
+        
+  date:
+    formats:
+      month_year: "%b %Y"
+
+  

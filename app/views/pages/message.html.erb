@@ -1,0 +1,5 @@
+<div class="hero-unit">
+  <h1><%= session[:message_title] || I18n.t('message.title.generic') %></h1>
+  <p><%= session[:message] || I18n.t('message.content.generic') %></p>
+  <p class="subnote"><%=t 'message.subnote' %></p>
+</div>

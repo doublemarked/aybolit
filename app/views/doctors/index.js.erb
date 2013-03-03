@@ -1,0 +1,5 @@
+$("#results_container").append("<%=j render :partial => "card_small", :collection => @doctors, :as => :doctor %>");
+<% unless @update %>
+  store_criteria( <%=raw({ :name => @name, :sorting => @sorting, :offset => @offset }.to_json) %> );
+<% end %>
+has_more_results(<%= @more_results.to_json %>);

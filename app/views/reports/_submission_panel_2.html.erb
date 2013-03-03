@@ -1,0 +1,35 @@
+<div id="submission_panel_2" class="submission_panel">
+  <div class="control-group">
+    <%= label_tag :hospital, t('submissions.main_form.hospital_label'), :class => "control-label" %>
+    <div id="location-selectors" class="controls">
+      <p><%= select_tag :oblast, oblast_select_options, :"data-placeholder" => t('submissions.main_form.oblast_select_label'), :include_blank => true %></p>
+      <p><%= hidden_field_tag :district, "", :"data-placeholder" => t('submissions.main_form.district_select_label') %></p>
+      <p><%= hidden_field_tag :hospital, "", :"data-placeholder" => t('submissions.main_form.hospital_select_label') %></p>
+    </div>
+  </div>
+  <div id="doctor_container" class="control-group" style="display: none">
+    <%= label_tag :doctor, t('submissions.main_form.doctor_label'), :class => "control-label" %>
+    <div class="controls">
+      <%= autocomplete_field_tag :doctor, "", "" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= form.label :doctor_experience, t('submissions.main_form.doctor_experience_label'), :class => "control-label" %>
+    <div class="controls">
+      <%= form.text_area :doctor_experience, :rows => "4" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= form.label :hospital_experience, t('submissions.main_form.hospital_experience_label'), :class => "control-label" %>
+    <div class="controls">
+      <%= form.text_area :hospital_experience, :rows => "2" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= form.label :occurred, t('submissions.main_form.occurred_label'), :class => "control-label" %>
+    <div class="controls">
+      <%= form.select :occurred, month_year_select_options, { :include_blank => true } %>
+    </div>
+  </div>
+  <p class="center_text"><%= link_to t('submissions.main_form.submit_button'), "", :id => "submit_step2", :class => "red_btn" %></p>
+</div>

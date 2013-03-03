@@ -1,0 +1,72 @@
+<%= javascript_tag do -%>
+$(function() {
+  map = new GMaps({
+    div: '#hospital_map',
+    lat: <%= @hospital.latitude %>,
+    lng: <%= @hospital.longitude %>,
+
+    zoom: 14,
+    panControl: false,
+    scrollwheel: false,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false
+  });
+
+  <% @map_hospitals.each do |h| %>
+      map.drawOverlay({
+        lat: <%= h.latitude %>,
+        lng: <%= h.longitude %>,
+        verticalAlign: "top",
+        content: '<div class="map_marker_gold"></div><div class="map_marker_label"><%= link_to h.name, h %></div>',
+      });
+  <% end %>
+
+});
+<% end %>
+
+<div class="jumbotron">
+  <h1><%= image_tag "gold_icon.png" %> <%= @hospital.name %></h1>
+  <p><%= @hospital.address %>, <%= @hospital.township %>, <%= @hospital.oblast %></p>
+</div>
+</div><!-- closes wrapper container - this is to enable the map to span margins -->
+<div id="hospital_map" class="map_block gmap_container" style="height: 180px">
+</div>
+
+<%= form_tag @hospital, :method => :get, :remote => true, :id => "results_form", :class => "inline-form" do -%>
+  <%= hidden_field_tag :update, true %>
+  <%= hidden_field_tag :offset, @offset %>
+  <%= hidden_field_tag :sorting, @sorting %>
+<% end %>
+
+<div class="container-narrow reviews_block">
+  <h2><%= @hospital.num_reports %> <%=t 'hospitals.show.experiences_heading' %></h2>
+  <h2><%= @hospital.num_delivered %> <%=t 'hospitals.show.delivered_heading' %></h2>
+  <div class="line"></div>
+  <div class="row-fluid">
+    <div class='span8'>
+      <div id='results_container'>
+        <%= render 'report_results' %>
+      </div>
+      <div id='results_loading' class='row-fluid' style='display: none'>
+        <div class='offset3 span6 loading_indicator'></div>
+      </div>
+      <div class='row-fluid'>
+        <div id='more_results_bar' class='offset3 span6 reviews_controls' style="display: none">
+          <i class="icon-chevron-down" style='vertical-align: middle; margin-right: 5px;'></i>
+          <%= link_to t('messages.more_results'), hospitals_path, :id => "more_results_link" %>
+          <i class="icon-chevron-down" style='vertical-align: middle; margin-left: 5px;'></i>
+        </div>
+      </div>
+    </div>
+    <%= javascript_tag do %>
+      has_more_results(<%= @more_results.to_json %>);
+      reveal_results();
+    <% end %>
+    <div class='span4'>
+      <%= render 'trending_doctors' %>
+    </div>
+  </div>
+</div>
+
+<%= render "partials/endorsement_modal" %>

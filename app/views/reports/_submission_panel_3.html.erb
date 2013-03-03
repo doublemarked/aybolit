@@ -1,0 +1,9 @@
+<div id="submission_panel_3" class="submission_panel">
+  <p><strong><%=t 'submissions.login_form.blurb' %></strong></p> 
+  <div class="soc_links">
+    <%= hidden_field_tag :provider %>
+    <p><%= link_to image_tag("fb_btn.png"), "#", :id => "submit_step3_fb" %></p>
+    <p><%= link_to image_tag("vk_btn.png"), "#", :id => "submit_step3_vk" %></p>
+  </div>
+  <p class="small_text"><%=t 'submissions.login_form.privacy_note' %></p>
+</div>

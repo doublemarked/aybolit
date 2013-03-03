@@ -1,0 +1,36 @@
+<div id="fb-root"></div>
+<div id="vk_api_transport"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '<%=j ENV['FACEBOOK_KEY'] %>', 
+      channelUrl : '//<%=j base_domain %>/facebook_channel.html',
+      status     : true,
+      cookie     : true,
+      xfbml      : true
+    });
+  };
+
+  (function(d, debug){
+    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+    ref.parentNode.insertBefore(js, ref);
+  }(document, false));
+
+  window.vkAsyncInit = function() {
+    VK.init({
+      apiId: '<%=j ENV['VKONTAKTE_KEY'] %>',
+      xd_receiver: '//<%=j base_domain %>/vk_xd_receiver.html',
+    });
+  }
+
+  setTimeout(function() {
+    var el = document.createElement("script");
+    el.type = "text/javascript";
+    el.src = "http://vkontakte.ru/js/api/openapi.js";
+    el.async = true;
+    document.getElementById("vk_api_transport").appendChild(el);
+  }, 0);
+</script>

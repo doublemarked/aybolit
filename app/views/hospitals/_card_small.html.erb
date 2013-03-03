@@ -1,0 +1,13 @@
+<div class='query_result row-fluid'>
+  <div class="hospital_block offset3 span6">
+    <div class="best_icon gold_icon"></div>
+    <div class="hospital_info">
+      <p><%= link_to hospital.name, hospital %></p>
+      <p class="small_text"><%= hospital.address %>, <%= hospital.township %>, <%= hospital.oblast %></p>
+    </div>
+    <div class="icons_block">
+      <a href="#" class="exp_block"><%= hospital.reports.size %></a>
+      <a href="#" class="doctor_block"><%= hospital.doctors.size %></a>
+    </div>
+  </div>
+</div>
