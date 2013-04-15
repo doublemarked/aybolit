@@ -1,10 +1,193 @@
 uk:
-  locale_name: Український
-
-  menu:
-    submit: Давай!
+  locale_name: Українська
+        
   date:
     formats:
       month_year: "%b %Y"
+
+  menu:
+    submit: Заповнити опитування
+    hospitals: Перевірити лікарню
+    logout: Вихід
+    copyright: Айболить-2013
+    about: Про ініціативу
+    contact: Контакти    
+
+  doctors:
+    search_placeholder: Знайти інформацію про лікаря
+    index:
+      heading: Знайти інформацію про лікаря
+      input_placeholder: Уведіть ім'я лікаря
+      search_button: Пошук
+    show:
+      # Prefixed by the # of reports for this doctor. Example: '43 experiences'
+      experiences_heading: відгуки
+      # Prefixed by the # of reports sent to this doctor. Example: '41 sent to the doctor'
+      delivered_heading: sent to the doctor
+
+  hospitals:
+    # Replace this with the locale-appropriate translation and location.
+    default_location: Кіровоград, Украйна
+
+    trending_doctors:
+      heading: Шановані медпрацівники
+    index:
+      heading: Перевірити лікарню
+      location_placeholder: Уведіть місцезнаходження лікарні
+      filter_button: Сортувати
+      # This is followed by a link to the default location. Example: 'Maybe try <a>Kirovohrad, Ukraine</a>?'
+      suggest_location: Можливо, ви мали на увазі
+    show:
+      # Prefixed by the # of reports for this hospital. Example: '43 experiences'
+      experiences_heading: відгуки
+      # Prefixed by the # of reports sent to this hospital. Example: '41 sent to the hospital'
+      delivered_heading: sent to the hospital
+
+  reports:
+    endorse: Підтримую
+    report_title: "Відгук пацієнта #FC2D-88%{id}"
+    created: Відгук успішно надіслано!
+    show:
+      patient_label: Пацієнт
+      doctor_label: Лікар
+      hospital_label: Лікарня
+      occurred_label: Дата відвідування
+      stats_label: Підтримали
+      details_link: Додатково
+      doctor_experience_label: Відгук про лікаря
+      hospital_experience_label: Відгук про лікарню
+
+
+    stats:
+      heading: Додатково
+      # Example usage: '1120 Views'
+      views: Перегляди
+      # Example usage: '93 Endorsements'
+      endorsements: Підтримано
+
+      endorsement_heading: Підтримано
+      endorsement_blurb_html: Цей відгук підтримало <b>%{count}</b> людей.
+
+      # Whether or not the report was delivered to the doctor/hospital.
+      delivered: Delivered
+      undelivered: Not Yet Delivered
+
+      delivery:
+        heading: Delivery Info
+        date_label: Mailed On
+        manager_label: Delivery Manager
+        sent_doctor_label: Sent To Doctor?
+        sent_hospital_label: Sent To Hospital?
+
+  submissions:
+    prereq_form:
+      prereq1: I had a positive experience with my doctor.
+      prereq2: I did not pay a bribe.
+      submit_button: Заповнити опитування
+    main_form:
+      hospital_label: Лікарня
+      oblast_select_label: Оберіть область
+      district_select_label: Оберіть район
+      hospital_select_label: Оберіть лікарню
+      doctor_label: Ім'я лікаря
+      doctor_experience_label: Ваш відгук про лікаря
+      hospital_experience_label: Ваш відгук про роботу лікарні (за бажанням)
+      occurred_label: Коли це відбулося? (за бажанням)
+      submit_button: Перейти до останнього пункту
+    login_form:
+      blurb: "Ми хочемо уникнути неправдивих відгуків, тому просимо вас зареєструватися. Це можна зробити через такі мережі:"
+      privacy_note: Ця інформація потрібна лише для уникнення шахрайства у відгуках. Ми не публікуватимемо ваше ім'я і не залишатимемо інформацію у вашій соціальній мережі без вашої згоди.
+
+  partials:
+    splash:
+      heading1: Разом ми змінимо систему!
+      heading2: Тільки гуртом ми здолаємо корупцію в медицині.
+      heading3: Підтримайте лікаря, який цього вартий. Розкажіть про свій досвід
+      heading4: Поділіться досвідом, врятуйте життя!
+
+    stats_banner: 
+      stats_blurb_html: Айболить отримав <b>%{report_count}</b> відгуків від %{user_count} людей. Over <b>%{percentage}</b> of them have been sent to hospitals.
+      more_info_link: Дізнайтеся більше
+
+    how_it_works: 
+      heading: Як працює Айболить
+      description: Ми збираємо ваші відгуки про лікарів та лікарні України та укладаємо список доброчесних медичних закладів. Ми хочемо підтримати порядних працівників медичної сфери.
+      about_page_link: Дізнайтеся більше про Айболить
+
+    recent:
+      heading: Найсвіжіша інформація
+      experiences_heading: Останні відгуки
+      hospitals_heading: Доброчесні лікарні
+      doctors_heading: Шановані медпрацівники
+      full_report_link: Переглянути відгук повністю
+      hospitals_link: Перевірте лікарні вашої області
+
+    prereq_modal:
+      heading: Requirements
+      explaination1_html: "Sorry, all Aybolit submissions must meet a very specific criterion: they must be <strong>positive experiences</strong> that did not require any sort of bribe, fee, or gift from the patient."
+      explaination2_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, belong elsewhere.
+      explaination3_html: "If you'd like to report something that does not meet our criteria, please consider one of the following:"
+      partner_link1: Partner Site / NGO (EXAMPLE)
+      partner_link2: Some Patients Services Organization (EXAMPLE)
+      partner_link3: Bribe Reporting (EXAMPLE)
+      dismiss_button: I understand 
+
+    endorsement_modal:
+      endorsements: Підтримали
+      endorsed_times_html: Цей відгук підтримало <b><span id="endorsement_modal_cnt"></span></b> людей.
+      show_your_support: Підтримую!
+      support_blurb_html: Для Айболить важлива ваша підтримка. Підтримуючи відгук, ви також долучаєтеся до створення списку порядних лікарень та медпрацівників.
+      fb_button: Підтримати через Facebook
+      vk_button: Підтримати через VKontakte
+      nevermind_button: Ігнорувати
+      thanks_heading: Дякуємо!
+      thanks_lead: Дякуємо за підтримку!
+      thanks_blurb: Для Айболить важлива ваша підтримка. Підтримуючи відгук, ви також долучаєтеся до створення списку порядних лікарень та медпрацівників.
+
+      dismiss_button: Відхилити
+
+
+  # These are from controls shared across pages
+  controls:
+    # This small text is displayed at the end of a report summary that has been truncated. It takes you to the full report.
+    read_more_link: читати далі
+
+    sorting_label: сортувати за
+    # This is the default value of the sorting select box
+    sorting_select_label: сортувати
+
+    # These are options used in the sorting select boxes
+    sort_by_relevance: значимістю
+    sort_by_recent_reports: найсвіжішими відгуками
+    sort_by_num_reports: кількістю відгуків
+    sort_by_distance: відстанню
+    sort_by_popularity: популярністю
+    sort_by_undelivered: undelivered
+
+  # These are shared messages 
+  messages:
+    # Displayed when there are more pages of search results available
+    more_results: Більше результатів
+    # The following string prefixes the failed search terms. Example: Sorry, no results for 'Dr. Dre'.
+    noresults: Вибачте, немає результатів для
+    # Showed in place of a user's name when we don't know their name
+    unknown_user_name: Неідентифікований
+
+    # Displayed when the user has logged out
+    logged_out: Ви вийшли із облікового запису
+
+    social_media_endorsement: "Я підтримую відгук про наступного медпрацівника \n\nЛікар: %{doctor}\nЛікарня: %{hospital}\n\nНатисніть, щоб ознайомитися з відгуком"
+
+    # This is displayed when something highly technical failed with VK.
+    vk_sig_failed: Авторизація не здійснилася 
+
+    # These are various messages used in the Javascript code
+    js:
+      login_failure: Реєстрація невдала
+      error: Помилка
+      already_endorsed: "Помилка: Ви вже підтримували цей звіт. Дякуємо!"
+      endorsement_complete: Відгук підтримано!
+      vk_wallpost_failure: Вибачте, через деякі проблеми ваш відгук у VKontakte не відправлено.
+      
 
   
