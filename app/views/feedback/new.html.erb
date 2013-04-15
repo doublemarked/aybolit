@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="page-header">
+    <h1><%=t 'feedback.header' %></h1>
+  </div>
+  <%= simple_form_for @feedback, :url => feedback_path, :html => { :novalidate => true, :class => 'form-horizontal' } do |f| %>
+    <% unless f.error_messages.blank? %>
+      <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= f.error_messages %>
+      </div>
+    <% end %>
+
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :message, :as => :text, :input_html => { :class => "span5", :rows => 4 } %>
+    <div style="display: none">
+      <%= f.input :reference %>
+    </div>
+    <%= f.button :submit, :class => "btn btn-large btn-primary" %>
+  <% end %>
+</div>
+

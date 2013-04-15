@@ -27,10 +27,9 @@ Aybolit::Application.routes.draw do
     match 'getCurrentUser' => 'jsonapi#current_user'
   end
 
-  #scope "/admin" do
-  #  resources :deliveries
-  #end
-
+  get 'feedback' => 'feedback#new'
+  post 'feedback' => 'feedback#create'
+  
   match '*page' => 'pages#show', :constraints => { :page => /[\w-]+/ }, :as => "page"
   root :to => 'pages#show'
 end
