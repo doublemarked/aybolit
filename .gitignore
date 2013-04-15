@@ -16,3 +16,6 @@
 
 # Ignore code coverage output (SimpleCov)
 coverage
+
+# Ignore foreman environment file
+.env
