@@ -11,7 +11,9 @@
 
 <div class="container-narrow reviews_block">
   <h2><%= @doctor.num_reports %> <%=t 'doctors.show.experiences_heading' %></h2>
+<!--
   <h2><%= @doctor.num_delivered %> <%=t 'doctors.show.delivered_heading' %></h2>
+-->
   <div class="line"></div>
   <div class="sorting_controls">
     <p><%=t 'controls.sorting_label' %>: <%= select_tag t('controls.sorting_select_label'), report_sorting_options(@sorting), :id => "sorting", :class => "sorting-select" %></p>

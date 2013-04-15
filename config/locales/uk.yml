@@ -1,10 +1,6 @@
 uk:
   locale_name: Українська
   
-  date:
-    formats:
-      month_year: "%b %Y"
-
   menu:
     submit: Заповнити опитування
     hospitals: Перевірити лікарню
@@ -106,7 +102,7 @@ uk:
       heading4: Поділіться досвідом, врятуйте життя!
 
     stats_banner: 
-      stats_blurb_html: Айболить отримав <b>%{report_count}</b> відгуків від %{user_count} людей. Over <b>%{percentage}</b> of them have been sent to hospitals.
+      stats_blurb_html: Айболить отримав <b>%{report_count}</b> відгуків від %{user_count} людей. 
       more_info_link: Дізнайтеся більше
 
     how_it_works: 
@@ -123,14 +119,8 @@ uk:
       hospitals_link: Перевірте лікарні вашої області
 
     prereq_modal:
-      heading: Requirements
-      explaination1_html: "Sorry, all Aybolit submissions must meet a very specific criterion: they must be <strong>positive experiences</strong> that did not require any sort of bribe, fee, or gift from the patient."
-      explaination2_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, belong elsewhere.
-      explaination3_html: "If you'd like to report something that does not meet our criteria, please consider one of the following:"
-      partner_link1: Partner Site / NGO (EXAMPLE)
-      partner_link2: Some Patients Services Organization (EXAMPLE)
-      partner_link3: Bribe Reporting (EXAMPLE)
-      dismiss_button: I understand 
+      explaination1_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, cannot be displaye
+      explaination2_html: If you had a negative experience, please <strong>send us a message</strong> by filling out the following form. Your information will NOT be displayed on t
 
     endorsement_modal:
       endorsements: Підтримали
@@ -145,6 +135,39 @@ uk:
       thanks_blurb: Для Айболить важлива ваша підтримка. Підтримуючи відгук, ви також долучаєтеся до створення списку порядних лікарень та медпрацівників.
 
       dismiss_button: Відхилити
+
+
+  feedback:
+    header: Contact Us
+    submission-message: Thank you for your message. We will get back to you shortly.
+    spam-message: This message appears to be spam. Sorry, it was not delivered.
+
+  complaint_form:
+    bribe_given_label: Did you have to reward doctors for treatment or advice?
+    initiated_by_label: Whose initiative was it?
+    bribe_type_label: How exactly did you compensate the doctor?
+    thinks_it_works_label: Do you think you get better medical care by rewarding doctors?
+
+    message_label: Message
+
+    options:
+      self: Self
+      doctor: Doctor
+
+      money: Money
+      gift: Gift
+      service: Service
+
+
+  message:
+    title:
+      generic: Thanks.
+      auth-required: Uh oh.
+
+    content:
+      generic:
+      auth-required: Access Denied.
+
 
 
   # These are from controls shared across pages
@@ -163,6 +186,9 @@ uk:
     sort_by_distance: відстанню
     sort_by_popularity: популярністю
     sort_by_undelivered: undelivered
+
+    option_yes: "Yes"
+    option_no: "No"
 
   # These are shared messages 
   messages:
@@ -189,5 +215,7 @@ uk:
       endorsement_complete: Відгук підтримано!
       vk_wallpost_failure: Вибачте, через деякі проблеми ваш відгук у VKontakte не відправлено.
       
+  date:
+    formats:
+      month_year: "%b %Y"
 
-  

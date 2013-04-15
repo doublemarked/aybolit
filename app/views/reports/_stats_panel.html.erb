@@ -5,7 +5,7 @@
       <ul class="unstyled">
         <li><i class='icon-eye-open icon-large'> </i> <%= report.views.to_i %> <%=t 'reports.stats.views' %></li>
         <li><i class='icon-thumbs-up icon-large'></i> <%= report.endorsements.size %> <%=t 'reports.stats.endorsements' %></li>
-        <li><i class='icon-envelope icon-large'></i> <%= report.delivery ? t('reports.stats.delivered') : t('reports.stats.undelivered') %></li>
+        <!-- <li><i class='icon-envelope icon-large'></i> <%= report.delivery ? t('reports.stats.delivered') : t('reports.stats.undelivered') %></li> -->
       </ul>
       <p class="center_text">
       <%= link_to "#", :class => "endorse_button btn btn-primary", :"data-reportid" => @report.id, :"data-count" => report.endorsements.size, :"data-message" => endorsement_message(@report) do %>
@@ -13,6 +13,7 @@
       <% end %>
       </p>
     </div>
+    <!--
     <% if report.delivery %>
       <div class="span4 report-stats-col">
         <p class="heading"><%=t 'reports.stats.delivery.heading' %></p>
@@ -24,6 +25,7 @@
         </ul>
       </div>
     <% end %>
+    -->
     <% if report.endorsements %>
       <div class="span4 report-stats-col">
         <p class="heading"><i class='icon-thumbs-up icon-large'></i> <%=t 'reports.stats.endorsement_heading' %></p>
