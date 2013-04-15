@@ -107,7 +107,7 @@ en:
       heading4: Support Your Doctor, Submit Your Experience!
 
     stats_banner: 
-      stats_blurb_html: Aybolit has collected <b>%{report_count}</b> experiences from %{user_count} people. Over <b>%{percentage}%</b> of them have been sent to hospitals.
+      stats_blurb_html: Aybolit has collected <b>%{report_count}</b> experiences from %{user_count} people. 
       more_info_link: Find out more
 
     how_it_works: 

@@ -107,10 +107,11 @@ h1,h2,h3,h4,h5 {
   background: none;
 }
 .search_block {
-  float: right;
+  //float: left;
   border: 1px #cccccc dashed;
   height: 38px;
-  margin-top: 67px;
+  margin-top: 20px;
+  //margin-left: 15px;
 }
 .find_doctor_btn {
   background: image-url("search_btn.png") left center no-repeat !important;
@@ -121,7 +122,7 @@ h1,h2,h3,h4,h5 {
   margin: 0 8px;
 }
 .find_doctor_input {
-  float: left;
+  float: left !important;
   background: transparent !important;
   border: none !important;
   font-family: 'Oswald', 'Open Sans', sans-serif;

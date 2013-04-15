@@ -34,6 +34,7 @@
     <% end %>
     <div class="masthead tophead">
       <div class="container-narrow">
+        <%= render "partials/locale_menu" %>
         <div class="logo">
           <%= link_to image_tag("logo.png"), root_path %>
         </div>
@@ -42,19 +43,20 @@
             <%= link_to t('menu.logout'), '/auth/logout' %></li>
           </div>
         <% end %>
-        <%= render "partials/locale_menu" %>
         <%= render "partials/stats_banner" %>
 
         <ul class="nav nav-pills pull-left">
           <li><%= link_to t("menu.submit"), new_report_path(:anchor => "Submission") %></li>
           <li><%= link_to t("menu.hospitals"), hospitals_path %></li>
+          <li style='border-right: 0'>
+            <div class="search_block">
+              <%= form_tag doctors_path, :method => :get, :id => "doctor_query_form", :class => "inline-form" do -%>
+                <%= submit_tag "", :class => "find_doctor_btn" %>
+                <%= autocomplete_field_tag :name, '', autocomplete_doctors_path, :placeholder => t('doctors.search_placeholder'), :id => "doctor_name", :class => "span2 find_doctor_input autoselector" %>
+              <% end %>
+            </div>
+          </li>
         </ul>
-        <div class="search_block">
-          <%= form_tag doctors_path, :method => :get, :id => "doctor_query_form", :class => "inline-form" do -%>
-            <%= submit_tag "", :class => "find_doctor_btn" %>
-            <%= autocomplete_field_tag :name, '', autocomplete_doctors_path, :placeholder => t('doctors.search_placeholder'), :id => "doctor_name", :class => "span3 find_doctor_input autoselector" %>
-          <% end %>
-        </div>
       </div>
     </div>
     <div id="main-div" class="container-narrow">
