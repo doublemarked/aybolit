@@ -28,7 +28,7 @@
   <div class="control-group">
     <%= form.label :occurred, t('submissions.main_form.occurred_label'), :class => "control-label" %>
     <div class="controls">
-      <%= form.select :occurred, month_year_select_options, { :include_blank => true } %>
+      <%= form.select :occurred, month_year_select_options, { :include_blank => true }, :class => "rich_select" %>
     </div>
   </div>
   <p class="center_text"><%= link_to t('submissions.main_form.submit_button'), "", :id => "submit_step2", :class => "red_btn" %></p>

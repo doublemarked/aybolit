@@ -4,31 +4,54 @@
     <h2><i class="icon-exclamation-sign"></i> <%=t 'partials.prereq_modal.heading' %></h2>
   </div>
   <div class="modal-body">
+    <p>
     <p><%=t 'partials.prereq_modal.explaination1_html' %></p>
     <p><%=t 'partials.prereq_modal.explaination2_html' %></p>
-    <p><%=t 'partials.prereq_modal.explaination3_html' %></p>
-    <ul>
-      <li>
-      <%= link_to "#", :target => "_new", :class => "multiline-link" do %>
-        <%=t 'partials.prereq_modal.partner_link1' %><br/>
-        <span>http://www.partner-ngo.org.ua/</span>
-      <% end %>
-      </li>
-      <li>
-      <%= link_to "#", :target => "_new", :class => "multiline-link" do %>
-        <%=t 'partials.prereq_modal.partner_link1' %><br/>
-        <span>http://www.patients.org.ua/</span>
-      <% end %>
-      </li>
-      <li>
-      <%= link_to "#", :target => "_new", :class => "multiline-link" do %>
-        <%=t 'partials.prereq_modal.partner_link1' %><br/>
-        <span>http://www.bribe-reporting.com.ua/</span>
-      <% end %>
-      </li>
-    </ul>
+
+    <%= form_for Feedback.new, :url => feedback_path, :html => { :novalidate => true, :class => "complaint_form" } do |f| %>
+
+      <div class="control-group">
+        <%= f.label :bribe_given, t('complaint_form.bribe_given_label'), :class => "control-label" %>
+        <div class="controls">
+          <%= f.select :bribe_given, [t('controls.option_yes'), t('controls.option_no')], { :include_blank => true }, :class => "rich_select" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :initiated_by, t('complaint_form.initiated_by_label'), :class => "control-label" %>
+        <div class="controls">
+          <%= f.select :initiated_by, [t('complaint_form.options.self'),t('complaint_form.options.doctor')], { :include_blank => true }, :class => "rich_select" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :bribe_type, t('complaint_form.bribe_type_label'), :class => "control-label" %>
+        <div class="controls">
+          <%= f.select :bribe_type, [t('complaint_form.options.money'), t('complaint_form.options.gift'), t('complaint_form.options.service')], { :include_blank => true }, :class => "rich_select" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :thinks_it_works, t('complaint_form.thinks_it_works_label'), :class => "control-label" %>
+        <div class="controls">
+          <%= f.select :thinks_it_works, [t('controls.option_yes'), t('controls.option_no')], { :include_blank => true }, :class => "rich_select" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :message, t('complaint_form.message_label'), :class => "control-label" %>
+        <div class="controls">
+          <%= f.text_area :message, :rows => "2" %>
+        </div>
+      </div>
+
+      <div style="display: none">
+        <%= f.hidden_field :reference %>
+      </div>
+      <%= f.button :submit, :class => "btn btn-large btn-primary" %>
+    <% end %>
+      
+
   </div>
-  <div class="modal-footer">
-    <button class="btn btn-primary" data-dismiss="modal"><%=t 'partials.prereq_modal.dismiss_button' %></button>
-  </div>
+
 </div>

@@ -1,10 +1,15 @@
 $ ->
+  $("#submit_step0").click (e) ->
+    e.preventDefault()
+    $("#steps_block").show()
+    show_step(1)
+
   $("#submit_step1").click (e) ->
     e.preventDefault()
-    if $("#submission_panel_1 input[type=checkbox]:checked").length < 2
-      $("#prereq_modal").modal 'show'
-    else
+    if $("#prereq_check_false").prop('checked')
       show_step(2)
+    else
+      $("#prereq_modal").modal 'show'
 
   $("#submit_step2").click (e) ->
     e.preventDefault()
@@ -26,8 +31,8 @@ $ ->
     $(this).animate { height: $(this).height() - 100 }, 200
 
 
-  # Activate rich select box for Occurred field
-  $("select#report_occurred").selectBoxIt()
+  # Activate rich select box where desired
+  $("select.rich_select").selectBoxIt()
   
   $("#oblast").select2({ allowClear: true }).on "change", (e) ->
     refresh_district()

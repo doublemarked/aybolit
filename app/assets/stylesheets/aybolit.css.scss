@@ -188,14 +188,18 @@ h1,h2,h3,h4,h5 {
   font-size: 16px;
 }
 
-.submission_panel label {
+.submission_panel label, .complaint_form label {
   font-size: 16px;
   color: #333;
   margin: 5px 0 10px !important;
 }
 
-.submission_panel textarea {
+.submission_panel textarea, .complaint_form textarea {
   width: 400px;
+}
+
+.complaint_form select {
+  width: 50px;
 }
 
 .current {
@@ -784,6 +788,15 @@ select {
   height: 38px;
 }
 
+// Narrow fields for our questionnaire
+#feedback_initiated_bySelectBoxIt, 
+#feedback_bribe_givenSelectBoxIt, 
+#feedback_bribe_typeSelectBoxIt,
+#feedback_thinks_it_worksSelectBoxIt {
+  width: 110px;
+  height: 38px;
+} 
+
 .control-container { 
   padding-bottom: 10px;
 }
@@ -1012,4 +1025,3 @@ span.standout {
   height: 70px;
   white-space: nowrap;
 }
-

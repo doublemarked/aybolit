@@ -1,6 +1,11 @@
 en:
   locale_name: English
 
+  project:
+    # NOTE: The following are used from the en locale regardless of client locale.
+    email-recipient: aybolit@doublemarked.com
+    email-subject: Aybolit Contact
+
   menu:
     submit: Submit Experience
     hospitals: Check a Hospital
@@ -119,14 +124,9 @@ en:
       hospitals_link: Check Hospitals in Your Region
 
     prereq_modal:
-      heading: Requirements
-      explaination1_html: "Sorry, all Aybolit submissions must meet a very specific criterion: they must be <strong>positive experiences</strong> that did not require any sort of bribe, fee, or gift from the patient."
-      explaination2_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, belong elsewhere.
-      explaination3_html: "If you'd like to report something that does not meet our criteria, please consider one of the following:"
-      partner_link1: Partner Site / NGO (EXAMPLE)
-      partner_link2: Some Patients Services Organization (EXAMPLE)
-      partner_link3: Bribe Reporting (EXAMPLE)
-      dismiss_button: I understand 
+      heading: Complaints
+      explaination1_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, cannot be displayed here.
+      explaination2_html: If you had a negative experience, please <strong>send us a message</strong> by filling out the following form. Your information will NOT be displayed on the website, but we WILL help you if possible.
 
     endorsement_modal:
       endorsements: Endorsements
@@ -141,6 +141,36 @@ en:
       thanks_blurb: Aybolit depends on the visible support of real people. Your endorsement helps us show doctors that their actions matter.
       dismiss_button: Dismiss
 
+  feedback:
+    header: Contact Us
+    submission-message: Thank you for your message. We will get back to you shortly.
+    spam-message: This message appears to be spam. Sorry, it was not delivered.
+
+  complaint_form:
+    bribe_given_label: Did you have to reward doctors for treatment or advice?
+    initiated_by_label: Whose initiative was it?
+    bribe_type_label: How exactly did you compensate the doctor?
+    thinks_it_works_label: Do you think you get better medical care by rewarding doctors?
+
+    message_label: Message
+
+    options:
+      self: Self
+      doctor: Doctor
+
+      money: Money
+      gift: Gift
+      service: Service
+
+
+  message:
+    title:
+      generic: Thanks.
+      auth-required: Uh oh.
+
+    content:
+      generic:
+      auth-required: Access Denied.
 
   # These are from controls shared across pages
   controls:
@@ -158,6 +188,9 @@ en:
     sort_by_distance: distance
     sort_by_popularity: most popular
     sort_by_undelivered: undelivered
+
+    option_yes: "Yes"
+    option_no: "No"
 
   # These are shared messages 
   messages:
@@ -183,11 +216,24 @@ en:
       already_endorsed: "Error: You've already endorsed this report! Thanks!"
       endorsement_complete: Endorsement complete!
       vk_wallpost_failure: Sorry, there were some problems sending your endorsement to VKontakte.
-      
-    
         
   date:
     formats:
       month_year: "%b %Y"
 
+  simple_form:
+    labels: 
+      ## FEEDBACK FORM 
+      feedback:
+        name: Your Name
+        email: Your Email
+        message: Message
+
+  helpers:
+    submit:
+      feedback:
+        create: "Send Feedback"
+
+
+ 
   

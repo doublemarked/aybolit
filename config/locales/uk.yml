@@ -1,6 +1,6 @@
 uk:
   locale_name: Українська
-        
+  
   date:
     formats:
       month_year: "%b %Y"

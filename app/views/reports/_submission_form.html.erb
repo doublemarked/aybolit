@@ -1,15 +1,16 @@
 <div class='row-fluid'>
   <div class="jumbotron">
-    <div id="steps_block">
+    <div id="steps_block" style="display: none;">
       <span class="green_step step_link">1</span><span class="step_line"></span>
       <span class="step_link">2</span><span class="step_line"></span>
-      <span class="step_link">3</span>
+      <span class="step_link">3</span><span class="step_line"></span>
     </div>
   </div>
 </div>
 <div class='row-fluid'>
   <div class="offset3 span6 step_slide_block">
     <%= form_for Report.new do |f| %>
+      <%= render :partial => 'reports/submission_panel_0', :locals => { :form => f } %>
       <%= render :partial => 'reports/submission_panel_1', :locals => { :form => f } %>
       <%= render :partial => 'reports/submission_panel_2', :locals => { :form => f } %>
       <%= render :partial => 'reports/submission_panel_3', :locals => { :form => f } %>
