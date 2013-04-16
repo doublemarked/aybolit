@@ -27,7 +27,7 @@ a {
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: "Oswald", "Open Sans Condensed", "Open Sans", sans-serif;
+  font-family: "Oswald", "Marmelad", "Open Sans Condensed", "Open Sans", sans-serif;
 }
 
 .jumbotron {
@@ -102,6 +102,8 @@ h1,h2,h3,h4,h5 {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed';
 }
 .nav  li  a:hover {
   background: none;
@@ -484,6 +486,7 @@ textarea {
   font-family: "Oswald", "Open Sans Condensed", "Open Sans", sans-serif;
   font-size: 16px;
   min-height: 65px;
+  font-weight: bold;
 }
 .hospital_info p {
   margin-bottom: 0;
@@ -898,7 +901,7 @@ img.letterhead-logo {
   z-index: 3;
 }
 .report_full h2  {
-  font-family: 'Special Elite';
+  font-family: 'Special Elite', monospace;
   padding-top: 10px;
 }
 
