@@ -3,7 +3,7 @@ en:
 
   project:
     # NOTE: The following are used from the en locale regardless of client locale.
-    email-recipient: aybolit@doublemarked.com
+    email-recipient: contact@aybolit.in.ua
     email-subject: Aybolit Contact
 
   menu:
