@@ -12,7 +12,7 @@ namespace :rebuild do
     Hospital.all.each do |h|
       unless Location.where(:name => h.display_address).exists?
         # This will ensure the new location is geocoded
-        Location.new(:name => h.display_address).save
+        Location.new(:name => h.display_location).save
         putc "."
       end
     end
