@@ -29,6 +29,7 @@ gem "factory_girl_rails", "~> 4.0"
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jquery-cookie-rails'
 gem 'jquery-validation-rails'
 gem 'select2-rails'
 gem 'twitter-bootstrap-rails'

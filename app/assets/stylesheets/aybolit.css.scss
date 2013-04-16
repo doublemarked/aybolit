@@ -1029,3 +1029,30 @@ span.standout {
   height: 70px;
   white-space: nowrap;
 }
+
+#survey_popover {
+  position: fixed;
+  top: auto;
+  left: auto;
+  right: 11px;
+  bottom: 20px;
+
+  font-family: 'Open Sans', sans-serif;
+
+  a {
+    color: #5D81A7;
+  }
+
+  .popover-title {
+    background-color: #5D81A7;
+    color: white;
+  } 
+
+  a.close {
+      color: white;
+      font-size: 28px;
+      line-height: 28px;
+      margin-right: 10px;
+  }
+
+}

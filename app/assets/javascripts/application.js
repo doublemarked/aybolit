@@ -11,8 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.cookie
 //= require jquery_ujs
-// I don't actually need ALL, but couldn't get submodules to load...
+// FIXME: We don't actually need ALL
 //= require jquery.ui.all
 //= require jquery.validate
 //= require autocomplete-rails
