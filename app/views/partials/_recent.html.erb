@@ -6,8 +6,10 @@
       <div class="report_blurb span4">
         <h4><span class="exp_title"><%=t 'partials.recent.experiences_heading' %></span></h4>
         <% report = Report.recent.first -%>
-        <p><%= truncate(report.doctor_experience, :length => 190, :separator => ' ') %></p>
-        <p class="center_text"><%= link_to t('partials.recent.full_report_link'), report %></p>
+        <% if report %>
+          <p><%= truncate(report.doctor_experience, :length => 190, :separator => ' ') %></p>
+          <p class="center_text"><%= link_to t('partials.recent.full_report_link'), report %></p>
+        <% end %>
       </div>
       <div class="span3 best_hospitals_blurb">
         <h4><span class="best_title"><%=t 'partials.recent.hospitals_heading' %></span></h4>
