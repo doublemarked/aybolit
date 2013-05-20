@@ -24,7 +24,7 @@ uk:
 
   hospitals:
     # Replace this with the locale-appropriate translation and location.
-    default_location: Кіровоград, Украйна
+    default_location: Кіровоград, Україна 
 
     trending_doctors:
       heading: Шановані медпрацівники
