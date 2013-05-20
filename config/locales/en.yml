@@ -13,6 +13,7 @@ en:
     copyright: Aybolit 2013
     about: About
     contact: Contact    
+    useful: Useful Info
 
   doctors:
     search_placeholder: Find Doctor
@@ -114,6 +115,7 @@ en:
       heading: How Aybolit works
       description: We use your stories of positive, ethical encounters with Ukrainian doctors to build an index of the best hospitals and clinics in Ukraine. We send your reports directly to hospitals and doctors.
       about_page_link: Read more about Aybolit and how it works
+      useful_info_link: Useful Information
 
     recent:
       heading: Recently on Aybolit
