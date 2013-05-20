@@ -146,6 +146,11 @@ en:
     submission-message: Thank you for your message. We will get back to you shortly.
     spam-message: This message appears to be spam. Sorry, it was not delivered.
 
+  survey:
+    heading: Hey There!
+    blurb: We're conducting a small survey, and could use your help!
+    link: Aybolit Site Survey
+
   complaint_form:
     bribe_given_label: Did you have to reward doctors for treatment or advice?
     initiated_by_label: Whose initiative was it?

@@ -92,7 +92,7 @@ uk:
       submit_button: Перейти до останнього пункту
     login_form:
       blurb: "Ми хочемо уникнути неправдивих відгуків, тому просимо вас зареєструватися. Це можна зробити через такі мережі:"
-      privacy_note: Ця інформація потрібна лише для уникнення шахрайства у відгуках. Ми не публікуватимемо ваше ім'я і не залишатимемо інформацію у вашій соціальній мережі без вашої згоди.
+      privacy_note: Ця інформація потрібна лише для уникнення шахрайства у відгуках. Ми не публікуватимемо вашого імені і не залишатимемо інформацію у вашій соціальній мережі без вашої згоди.
 
   partials:
     splash:
@@ -119,8 +119,8 @@ uk:
       hospitals_link: Перевірте лікарні вашої області
 
     prereq_modal:
-      explaination1_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, cannot be displaye
-      explaination2_html: If you had a negative experience, please <strong>send us a message</strong> by filling out the following form. Your information will NOT be displayed on t
+      explaination1_html: На цьому вебсайті як приклад для наслідування ми хочемо представити лікарів та лікарні, яким довіряють. Відгуки про негативний досвід не будуть у відкритому доступі на сайті, проте, якщо ви залишаєте такий відгук, ми зробимо все, аби допомогти вам вирішити проблему.
+      explaination2_html: Якщо ви мали негативний досвід із лікарем або лікарнею, будь ласка, <strong>сповістіть нас,</strong> заповнивши наступну форму. Ваш відгук не буде опубліковано на сайті, але він дасть нам можливість допомогти вам знайти вихід у цій проблемі.
 
     endorsement_modal:
       endorsements: Підтримали
@@ -136,38 +136,41 @@ uk:
 
       dismiss_button: Відхилити
 
-
   feedback:
-    header: Contact Us
-    submission-message: Thank you for your message. We will get back to you shortly.
-    spam-message: This message appears to be spam. Sorry, it was not delivered.
+    header: Зв'яжіться з нами
+    submission-message: Дякуємо за ваше повідомлення. Скоро ми вам відповімо.
+    spam-message: Це повідомлення виглядає як спам. Вибачте, його не було доставлено.
+
+  survey:
+    heading: Вітаємо!
+    blurb: Ми проводимо коротеньке опитування стосовно якості роботи сайту, і були б вдячні, аби ви поділилися своєю думкою з нами.
+    link: З радістю допоможу!
 
   complaint_form:
-    bribe_given_label: Did you have to reward doctors for treatment or advice?
-    initiated_by_label: Whose initiative was it?
-    bribe_type_label: How exactly did you compensate the doctor?
-    thinks_it_works_label: Do you think you get better medical care by rewarding doctors?
+    bribe_given_label: Чи доводилося Вам віддячувати лікареві за лікування або консультацію?
+    initiated_by_label: Чия це була ініціатива?
+    bribe_type_label: Як саме Ви подякували лікареві?
+    thinks_it_works_label: Чи вважаєте Ви, що можна отримати якісну медичну допомогу не винагороджуючи лікаря?
 
-    message_label: Message
+    message_label: Повідомлення
 
     options:
-      self: Self
-      doctor: Doctor
+      self: Моя власна
+      doctor: Лікаря
 
-      money: Money
-      gift: Gift
-      service: Service
+      money: Гроші
+      gift: Подарунок
+      service: Послуга
 
 
   message:
     title:
-      generic: Thanks.
-      auth-required: Uh oh.
+      generic: Дякуємо
+      auth-required: о-о
 
     content:
       generic:
-      auth-required: Access Denied.
-
+      auth-required: У доступі відмовлено
 
 
   # These are from controls shared across pages
@@ -187,8 +190,9 @@ uk:
     sort_by_popularity: популярністю
     sort_by_undelivered: undelivered
 
-    option_yes: "Yes"
-    option_no: "No"
+    option_yes: "Так"
+    option_no: "Ні"
+
 
   # These are shared messages 
   messages:
@@ -215,6 +219,7 @@ uk:
       endorsement_complete: Відгук підтримано!
       vk_wallpost_failure: Вибачте, через деякі проблеми ваш відгук у VKontakte не відправлено.
       
+  
   date:
     formats:
       month_year: "%b %Y"

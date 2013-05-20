@@ -28,6 +28,7 @@ $(function() {
 <div class="jumbotron">
   <h1><%= image_tag "gold_icon.png" %> <%= @hospital.name %></h1>
   <p><%= @hospital.address %>, <%= @hospital.township %>, <%= @hospital.oblast %></p>
+  <p><%= @hospital.phone %></p>
 </div>
 </div><!-- closes wrapper container - this is to enable the map to span margins -->
 <div id="hospital_map" class="map_block gmap_container" style="height: 180px">

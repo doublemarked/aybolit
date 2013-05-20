@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130209193303) do
+ActiveRecord::Schema.define(:version => 20130520092352) do
 
   create_table "deliveries", :force => true do |t|
     t.string   "manager"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130209193303) do
     t.integer  "num_reports",   :default => 0
     t.integer  "num_delivered", :default => 0
     t.datetime "latest_at"
+    t.string   "phone"
   end
 
   create_table "locations", :force => true do |t|

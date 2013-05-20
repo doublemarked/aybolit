@@ -18,7 +18,7 @@ class Hospital < ActiveRecord::Base
   scope :best, order("rating DESC")
 
   attr_accessible :name, :director
-  attr_accessible :address, :address2, :township, :district, :oblast, :postal, :country
+  attr_accessible :address, :address2, :township, :district, :oblast, :postal, :country, :phone
 
   validates :name, :address, :township, :district, :oblast, :postal, :country, :presence => true
 
