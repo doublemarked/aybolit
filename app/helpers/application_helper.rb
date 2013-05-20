@@ -1,6 +1,10 @@
 module ApplicationHelper
   def delivery_percentage
-    "%2.0f" % ( 100 * Report.delivered.count / Report.count)
+    total = Report.count 
+    return "0" unless total > 0
+
+    delivered = Report.delivered.count
+    "%2.0f" % ( 100 * delivered / total)
   end
 
   def full_image_path(img_path)
