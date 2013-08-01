@@ -27,6 +27,7 @@ gem 'jazz_hands', :group => [:development, :test]
 gem 'simplecov', :require => false, :group => :test # Code Coverage
 gem "factory_girl_rails", "~> 4.0"
 
+gem 'localeapp'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-validation-rails'
