@@ -1,15 +1,15 @@
 uk:
   locale_name: Українська
-  
   menu:
     submit: Заповнити опитування
     hospitals: Перевірити лікарню
     logout: Вихід
     copyright: Айболить-2013
     about: Про ініціативу
-    contact: Контакти    
+    contact: Контакти
+    important: Important Links
     useful: Це важливо знати
-
+    rights: права пацієнтів
   doctors:
     search_placeholder: Знайти інформацію про лікаря
     index:
@@ -17,32 +17,23 @@ uk:
       input_placeholder: Уведіть ім'я лікаря
       search_button: Пошук
     show:
-      # Prefixed by the # of reports for this doctor. Example: '43 experiences'
       experiences_heading: відгуки
-      # Prefixed by the # of reports sent to this doctor. Example: '41 sent to the doctor'
       delivered_heading: sent to the doctor
-
   hospitals:
-    # Replace this with the locale-appropriate translation and location.
-    default_location: Кіровоград, Україна 
-
+    default_location: Кіровоград, Україна
     trending_doctors:
       heading: Шановані медпрацівники
     index:
       heading: Перевірити лікарню
       location_placeholder: Уведіть місцезнаходження лікарні
       filter_button: Сортувати
-      # This is followed by a link to the default location. Example: 'Maybe try <a>Kirovohrad, Ukraine</a>?'
       suggest_location: Можливо, ви мали на увазі
     show:
-      # Prefixed by the # of reports for this hospital. Example: '43 experiences'
       experiences_heading: відгуки
-      # Prefixed by the # of reports sent to this hospital. Example: '41 sent to the hospital'
       delivered_heading: sent to the hospital
-
   reports:
     endorse: Підтримую
-    report_title: "Відгук пацієнта #FC2D-88%{id}"
+    report_title: ! 'Відгук пацієнта #FC2D-88%{id}'
     created: Відгук успішно надіслано!
     show:
       patient_label: Пацієнт
@@ -53,29 +44,20 @@ uk:
       details_link: Додатково
       doctor_experience_label: Відгук про лікаря
       hospital_experience_label: Відгук про лікарню
-
-
     stats:
       heading: Додатково
-      # Example usage: '1120 Views'
       views: Перегляди
-      # Example usage: '93 Endorsements'
       endorsements: Підтримано
-
       endorsement_heading: Підтримано
       endorsement_blurb_html: Цей відгук підтримало <b>%{count}</b> людей.
-
-      # Whether or not the report was delivered to the doctor/hospital.
       delivered: Delivered
       undelivered: Not Yet Delivered
-
       delivery:
         heading: Delivery Info
         date_label: Mailed On
         manager_label: Delivery Manager
         sent_doctor_label: Sent To Doctor?
         sent_hospital_label: Sent To Hospital?
-
   submissions:
     prereq_form:
       prereq1: I had a positive experience with my doctor.
@@ -92,26 +74,22 @@ uk:
       occurred_label: Коли це відбулося? (за бажанням)
       submit_button: Перейти до останнього пункту
     login_form:
-      blurb: "Ми хочемо уникнути неправдивих відгуків, тому просимо вас зареєструватися. Це можна зробити через такі мережі:"
+      blurb: ! 'Ми хочемо уникнути неправдивих відгуків, тому просимо вас зареєструватися. Це можна зробити через такі мережі:'
       privacy_note: Ця інформація потрібна лише для уникнення шахрайства у відгуках. Ми не публікуватимемо вашого імені і не залишатимемо інформацію у вашій соціальній мережі без вашої згоди.
-
   partials:
     splash:
       heading1: Разом ми змінимо систему!
       heading2: Тільки гуртом ми здолаємо корупцію в медицині.
       heading3: Підтримайте лікаря, який цього вартий. Розкажіть про свій досвід
       heading4: Поділіться досвідом, врятуйте життя!
-
-    stats_banner: 
-      stats_blurb_html: Айболить отримав <b>%{report_count}</b> відгуків від %{user_count} людей. 
+    stats_banner:
+      stats_blurb_html: Айболить отримав <b>%{report_count}</b> відгуків від %{user_count} людей.
       more_info_link: Дізнайтеся більше
-
-    how_it_works: 
+    how_it_works:
       heading: Як працює Айболить
       description: Ми збираємо ваші відгуки про лікарів та лікарні України та укладаємо список доброчесних медичних закладів. Ми хочемо підтримати порядних працівників медичної сфери.
       about_page_link: Дізнайтеся більше про Айболить
-      useful_info_link: Це важливо знати 
-
+      useful_info_link: Це важливо знати
     recent:
       heading: Найсвіжіша інформація
       experiences_heading: Останні відгуки
@@ -119,11 +97,9 @@ uk:
       doctors_heading: Шановані медпрацівники
       full_report_link: Переглянути відгук повністю
       hospitals_link: Перевірте лікарні вашої області
-
     prereq_modal:
       explaination1_html: На цьому вебсайті як приклад для наслідування ми хочемо представити лікарів та лікарні, яким довіряють. Відгуки про негативний досвід не будуть у відкритому доступі на сайті, проте, якщо ви залишаєте такий відгук, ми зробимо все, аби допомогти вам вирішити проблему.
       explaination2_html: Якщо ви мали негативний досвід із лікарем або лікарнею, будь ласка, <strong>сповістіть нас,</strong> заповнивши наступну форму. Ваш відгук не буде опубліковано на сайті, але він дасть нам можливість допомогти вам знайти вихід у цій проблемі.
-
     endorsement_modal:
       endorsements: Підтримали
       endorsed_times_html: Цей відгук підтримало <b><span id="endorsement_modal_cnt"></span></b> людей.
@@ -135,94 +111,86 @@ uk:
       thanks_heading: Дякуємо!
       thanks_lead: Дякуємо за підтримку!
       thanks_blurb: Для Айболить важлива ваша підтримка. Підтримуючи відгук, ви також долучаєтеся до створення списку порядних лікарень та медпрацівників.
-
       dismiss_button: Відхилити
-
   feedback:
     header: Зв'яжіться з нами
     submission-message: Дякуємо за ваше повідомлення. Скоро ми вам відповімо.
     spam-message: Це повідомлення виглядає як спам. Вибачте, його не було доставлено.
-
   survey:
     heading: Вітаємо!
     blurb: Ми проводимо коротеньке опитування стосовно якості роботи сайту, і були б вдячні, аби ви поділилися своєю думкою з нами.
     link: З радістю допоможу!
-
   complaint_form:
     bribe_given_label: Чи доводилося Вам віддячувати лікареві за лікування або консультацію?
     initiated_by_label: Чия це була ініціатива?
     bribe_type_label: Як саме Ви подякували лікареві?
     thinks_it_works_label: Чи вважаєте Ви, що можна отримати якісну медичну допомогу не винагороджуючи лікаря?
-
     message_label: Повідомлення
-
     options:
       self: Моя власна
       doctor: Лікаря
-
       money: Гроші
       gift: Подарунок
       service: Послуга
-
-
   message:
     title:
       generic: Дякуємо
       auth-required: о-о
-
     content:
-      generic:
+      generic: 
       auth-required: У доступі відмовлено
-
-
-  # These are from controls shared across pages
   controls:
-    # This small text is displayed at the end of a report summary that has been truncated. It takes you to the full report.
     read_more_link: читати далі
-
     sorting_label: сортувати за
-    # This is the default value of the sorting select box
     sorting_select_label: сортувати
-
-    # These are options used in the sorting select boxes
     sort_by_relevance: значимістю
     sort_by_recent_reports: найсвіжішими відгуками
     sort_by_num_reports: кількістю відгуків
     sort_by_distance: відстанню
     sort_by_popularity: популярністю
     sort_by_undelivered: undelivered
-
-    option_yes: "Так"
-    option_no: "Ні"
-
-
-  # These are shared messages 
+    option_yes: Так
+    option_no: Ні
   messages:
-    # Displayed when there are more pages of search results available
     more_results: Більше результатів
-    # The following string prefixes the failed search terms. Example: Sorry, no results for 'Dr. Dre'.
     noresults: Вибачте, немає результатів для
-    # Showed in place of a user's name when we don't know their name
     unknown_user_name: Неідентифікований
-
-    # Displayed when the user has logged out
     logged_out: Ви вийшли із облікового запису
-
-    social_media_endorsement: "Я підтримую відгук про наступного медпрацівника \n\nЛікар: %{doctor}\nЛікарня: %{hospital}\n\nНатисніть, щоб ознайомитися з відгуком"
-
-    # This is displayed when something highly technical failed with VK.
-    vk_sig_failed: Авторизація не здійснилася 
-
-    # These are various messages used in the Javascript code
+    social_media_endorsement: ! "Я підтримую відгук про наступного медпрацівника \n\nЛікар: %{doctor}\nЛікарня: %{hospital}\n\nНатисніть, щоб ознайомитися з відгуком"
+    vk_sig_failed: Авторизація не здійснилася
     js:
       login_failure: Реєстрація невдала
       error: Помилка
-      already_endorsed: "Помилка: Ви вже підтримували цей звіт. Дякуємо!"
+      already_endorsed: ! 'Помилка: Ви вже підтримували цей звіт. Дякуємо!'
       endorsement_complete: Відгук підтримано!
       vk_wallpost_failure: Вибачте, через деякі проблеми ваш відгук у VKontakte не відправлено.
-      
-  
   date:
     formats:
-      month_year: "%b %Y"
+      month_year: ! '%b %Y'
+  patients_rights:
+    body: ! 'Базовим законом у сфері охорони здоров’я є Основи законодавства України про охорону здоров’я. Цей закон декларує право кожного з нас на здоров’я і на захист цього права. Він дає визначення медико-санітарної допомоги як “комплексу спеціальних заходів, спрямованих на сприяння поліпшенню здоров’я, підвищення санітарної культури, запобігання захворюванням та інвалідності, на ранню діагностику, допомогу особам з гострими і хронічними захворюваннями й реабілітацію хворих та інвалідів”. У ньому визначено засади організації охорони здоров’я в Україні, перелік прав і обов’язків держави та громадян у сфері охорони здоров’я. Серед обов’язків громадян вказується обов’язок піклуватися про своє здоров’я.
 
+
+      У переліку прав, зазначених у цьому законі, є такі, як:
+
+      1) право на безпечні та здорові умови праці, навчання, проживання та відпочинку;
+
+      2) право на кваліфіковану медико-санітарну допомогу, включаючи вільний вибір лікаря, вибір методів лікування та установ охорони здоров’я;
+
+      3) право на достовірну і своєчасну інформацію про стан свого здоров’я і здоров’я населення включаючи існуючі і можливі фактори і ступінь ризику;
+
+      4) право на участь в управлінні охороною здоров’я та проведенні громадської експертизи;
+
+      5) право на правовий захист від будь-яких незаконних форм дискримінації, пов’язаних зі станом здоров’я;
+
+      6) право на відшкодування заподіяної здоров’ю шкоди;
+
+      7) право на оскарження неправомірних рішень і дій працівників установ та органів охорони здоров’я;
+
+      8) право на проведення незалежної медичної експертизи у разі незгоди з висновками державної медичної експертизи, застосування примусового лікування і в інших випадках, коли діями працівників охорони здоров’я можуть бути обмежені права людини;
+
+      9) право пацієнта, який перебуває на стаціонарному лікуванні, на допуск до нього інших медичних працівників, членів сім’ї, опікуна, піклувальника, нотаріуса та адвоката, а також священнослужителя для здійснення богослужіння і інших релігійних обрядів.
+
+
+      Що стосується відповідальності за порушення прав людини у галузі охорони здоров’я, чинне законодавство України визначає кримінальну, майнову і адміністративну відповідальність, які визначені нормами Кримінального та Цивільного Кодексів України та Кодексом про адміністративні правопорушення відповідно.'
+    title: права пацієнтів

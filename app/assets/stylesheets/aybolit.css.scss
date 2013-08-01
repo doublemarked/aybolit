@@ -1056,3 +1056,21 @@ span.standout {
   }
 
 }
+
+.infobox {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  line-height: 1;
+
+  b {
+    font-size: 14px;
+  }
+
+  p {
+    float: none;
+    margin: 3px;
+    font-size: 12px;
+  }
+}
+

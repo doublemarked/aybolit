@@ -1,20 +1,18 @@
 en:
   locale_name: English
-
   project:
-    # NOTE: The following are used from the en locale regardless of client locale.
     email-recipient: contact@aybolit.in.ua
     email-subject: Aybolit Contact
-
   menu:
     submit: Submit Experience
     hospitals: Check a Hospital
     logout: Logout
     copyright: Aybolit 2013
     about: About
-    contact: Contact    
+    contact: Contact
+    important: Important Links
     useful: Useful Info
-
+    rights: Patients' Rights
   doctors:
     search_placeholder: Find Doctor
     index:
@@ -22,32 +20,23 @@ en:
       input_placeholder: Enter the doctor's name
       search_button: Search
     show:
-      # Prefixed by the # of reports for this doctor. Example: '43 experiences'
       experiences_heading: experiences
-      # Prefixed by the # of reports sent to this doctor. Example: '41 sent to the doctor'
       delivered_heading: sent to the doctor
-
   hospitals:
-    # Replace this with the locale-appropriate translation and location.
     default_location: Kiev, Ukraine
-
     trending_doctors:
       heading: Trending doctors
     index:
       heading: Check a Hospital
       location_placeholder: Enter your location
       filter_button: Filter
-      # This is followed by a link to the default location. Example: 'Maybe try <a>Kirovohrad, Ukraine</a>?'
-      suggest_location: Maybe try 
+      suggest_location: Maybe try
     show:
-      # Prefixed by the # of reports for this hospital. Example: '43 experiences'
       experiences_heading: experiences
-      # Prefixed by the # of reports sent to this hospital. Example: '41 sent to the hospital'
       delivered_heading: sent to the hospital
-
   reports:
     endorse: Endorse
-    report_title: "Patient Report #FC2D-88%{id}"
+    report_title: ! 'Patient Report #FC2D-88%{id}'
     created: Report created!
     show:
       patient_label: Patient
@@ -58,29 +47,20 @@ en:
       details_link: Details
       doctor_experience_label: Experience With Doctor
       hospital_experience_label: Experience With Hospital
-
-
     stats:
       heading: Report Details
-      # Example usage: '1120 Views'
       views: Views
-      # Example usage: '93 Endorsements'
       endorsements: Endorsements
-
       endorsement_heading: Endorsements
       endorsement_blurb_html: This report has been endorsed by <b>%{count}</b> people.
-
-      # Whether or not the report was delivered to the doctor/hospital.
       delivered: Delivered
       undelivered: Not Yet Delivered
-
       delivery:
         heading: Delivery Info
         date_label: Mailed On
         manager_label: Delivery Manager
         sent_doctor_label: Sent To Doctor?
         sent_hospital_label: Sent To Hospital?
-
   submissions:
     prereq_form:
       prereq1: I had a positive experience with my doctor.
@@ -95,41 +75,35 @@ en:
       doctor_experience_label: Your experience with the doctor
       hospital_experience_label: Your experience with the hospital (optional)
       occurred_label: When was this? (optional)
-      submit_button: Move to last step 
+      submit_button: Move to last step
     login_form:
-      blurb: "To prevent fraud, we require you to identify yourself to us. Please do so using one of the following:"
+      blurb: ! 'To prevent fraud, we require you to identify yourself to us. Please do so using one of the following:'
       privacy_note: Your info will only be used for indentification. We will not publish your full name, nor post on your social media accounts without your prior consent.
-
   partials:
     splash:
       heading1: A Good Doctor Is Hard To Find.
       heading2: Help us fight corruption in the Ukrainian medical system.
       heading3: Support ethical doctors and hospitals. Save Lives.
       heading4: Support Your Doctor, Submit Your Experience!
-
-    stats_banner: 
-      stats_blurb_html: Aybolit has collected <b>%{report_count}</b> experiences from %{user_count} people. 
+    stats_banner:
+      stats_blurb_html: Aybolit has collected <b>%{report_count}</b> experiences from %{user_count} people.
       more_info_link: Find out more
-
-    how_it_works: 
+    how_it_works:
       heading: How Aybolit works
       description: We use your stories of positive, ethical encounters with Ukrainian doctors to build an index of the best hospitals and clinics in Ukraine. We send your reports directly to hospitals and doctors.
       about_page_link: Read more about Aybolit and how it works
       useful_info_link: Useful Information
-
     recent:
       heading: Recently on Aybolit
       experiences_heading: Recent Experiences
-      hospitals_heading: Best Hospitals      
+      hospitals_heading: Best Hospitals
       doctors_heading: Trending Doctors
       full_report_link: View Full Report
       hospitals_link: Check Hospitals in Your Region
-
     prereq_modal:
       heading: Complaints
       explaination1_html: This website represents an effort to identify the most ethical doctors in Ukraine. Other types of stories and reports, while important, cannot be displayed here.
       explaination2_html: If you had a negative experience, please <strong>send us a message</strong> by filling out the following form. Your information will NOT be displayed on the website, but we WILL help you if possible.
-
     endorsement_modal:
       endorsements: Endorsements
       endorsed_times_html: This report has been endorsed <b><span id="endorsement_modal_cnt"></span></b> times.
@@ -142,105 +116,104 @@ en:
       thanks_lead: Thank you for your support!
       thanks_blurb: Aybolit depends on the visible support of real people. Your endorsement helps us show doctors that their actions matter.
       dismiss_button: Dismiss
-
   feedback:
     header: Contact Us
     submission-message: Thank you for your message. We will get back to you shortly.
     spam-message: This message appears to be spam. Sorry, it was not delivered.
-
   survey:
     heading: Hey There!
     blurb: We're conducting a small survey, and could use your help!
     link: Aybolit Site Survey
-
   complaint_form:
     bribe_given_label: Did you have to reward doctors for treatment or advice?
     initiated_by_label: Whose initiative was it?
     bribe_type_label: How exactly did you compensate the doctor?
     thinks_it_works_label: Do you think you get better medical care by rewarding doctors?
-
     message_label: Message
-
     options:
       self: Self
       doctor: Doctor
-
       money: Money
       gift: Gift
       service: Service
-
-
   message:
     title:
       generic: Thanks.
       auth-required: Uh oh.
-
     content:
-      generic:
+      generic: Sorry.
       auth-required: Access Denied.
-
-  # These are from controls shared across pages
   controls:
-    # This small text is displayed at the end of a report summary that has been truncated. It takes you to the full report.
     read_more_link: read on
-
     sorting_label: sort by
-    # This is the default value of the sorting select box
     sorting_select_label: sorting
-
-    # These are options used in the sorting select boxes
     sort_by_relevance: relevance
     sort_by_recent_reports: most recent reports
     sort_by_num_reports: most reports
     sort_by_distance: distance
     sort_by_popularity: most popular
     sort_by_undelivered: undelivered
-
-    option_yes: "Yes"
-    option_no: "No"
-
-  # These are shared messages 
+    option_yes: 'Yes'
+    option_no: 'No'
   messages:
-    # Displayed when there are more pages of search results available
     more_results: More Results
-    # The following string prefixes the failed search terms. Example: Sorry, no results for 'Dr. Dre'.
-    noresults: Sorry, no results for 
-    # Showed in place of a user's name when we don't know their name
+    noresults: Sorry, no results for
     unknown_user_name: Unidentified
+    logged_out: Logged out.
+    social_media_endorsement: ! 'I have read and support a report on Aybolit describing the following ethical public health provider,
 
-    # Displayed when the user has logged out
-    logged_out: Logged out. 
 
-    social_media_endorsement: "I have read and support a report on Aybolit describing the following ethical public health provider,\n\nDoctor: %{doctor}\nHospital: %{hospital}\n\nClick below to read this Report!"
+      Doctor: %{doctor}
 
-    # This is displayed when something highly technical failed with VK.
-    vk_sig_failed: Auth Signature failed check. 
+      Hospital: %{hospital}
 
-    # These are various messages used in the Javascript code
+
+      Click below to read this Report!'
+    vk_sig_failed: Auth Signature failed check.
     js:
       login_failure: Login Failure.
       error: Error
-      already_endorsed: "Error: You've already endorsed this report! Thanks!"
+      already_endorsed: ! 'Error: You''ve already endorsed this report! Thanks!'
       endorsement_complete: Endorsement complete!
       vk_wallpost_failure: Sorry, there were some problems sending your endorsement to VKontakte.
-        
   date:
     formats:
-      month_year: "%b %Y"
-
+      month_year: ! '%b %Y'
   simple_form:
-    labels: 
-      ## FEEDBACK FORM 
+    labels:
       feedback:
         name: Your Name
         email: Your Email
         message: Message
-
   helpers:
     submit:
       feedback:
-        create: "Send Feedback"
+        create: Send Feedback
+  patients_rights:
+    title: Patients' Rights
+    body: ! 'The legal basis for health care in Ukraine is the law entitled, “The Basic Law on Health in Ukraine,” which declares and protects a right to health for every Ukrainian. It defines “health care” as “a set of specialized measures that promote better health, improve sanitary culture, prevent disease and disabilities, diagnose ailments early, helps people with chronic and acute diseases, and rehabilitates the sick and disabled.” The law defines the principles of public health in Ukraine and lists the rights and responsibilities of the government and citizens in the healthcare sphere. Among citizens'' responsibilities is the duty to take care of one''s own health.
 
 
- 
-  
+      The list of rights specified by law are as follows:
+
+
+      1) The right to safe and healthy conditions for work, study, life, and recreation;
+
+      2) The right to qualified medical care, including the right to choose one''s doctor, course of treatment, and healthcare institution;
+
+      3) The right to accurate and timely information on the state of personal and public health, including existing and possible risk factors;
+
+      4) The right to participate in the management and implementation of healthcare and conduct community examinations;
+
+      5) The right to protection against any form of illegal discrimination connected with health;
+
+      6) The right to compensation for damages to one''s health;
+
+      7) The right for workers to appeal unlawful decisions and actions of employees of healthcare institutions;
+
+      8) The right to conduct independent medical examinations in the case of a disagreement with the conclusions of a government medical examination, an incident of compulsory treatment, or other cases where the activities of healthcare professionals might infringe upon human rights;
+
+      9) The right of access to patients in inpatient facilities to family members, legal guardians, trustees, notaries, lawyers, other healthcare professionals, and priests for sermons and other religious ceremonies.
+
+
+      With regard to liability for the violation of human rights in the health sector, the current legislation of Ukraine defines criminal, property and administrative responsibilities as determined by the norms of the Criminal and Civil Codes and the Code of Ukraine on Administrative Offenses, respectively. '

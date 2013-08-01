@@ -44,6 +44,14 @@
           </div>
         <% end %>
         <%= render "partials/stats_banner" %>
+        
+        <div class='infobox'>
+          <p><b><i class='icon-exclamation-sign'></i> <%= t 'menu.important' %>:</b></p>
+          <p>
+            <%= link_to t("menu.rights"), page_path(:rights) %>, 
+            <%= link_to t("menu.useful"), page_path(:useful) %> 
+          </p>
+        </div>
 
         <ul class="nav nav-pills pull-left">
           <li><%= link_to t("menu.submit"), new_report_path(:anchor => "Submission") %></li>
